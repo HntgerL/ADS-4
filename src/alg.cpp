@@ -2,7 +2,7 @@
 int countPairs1(int *arr, int len, int value) {
   int count = 0;
   for (int i = 0; i < len ; ++i) {
-    for (int j = i; j < len ; ++j) {
+    for (int j = i + 1; j < len ; ++j) {
       if (arr[i] + arr[j] == value) {
         count += 1;
       }
@@ -13,7 +13,7 @@ return count;
 int countPairs2(int *arr, int len, int value) {
   int count = 0;
   int lboard = 0;
-  int rboard = len;
+  int rboard = len - 1;
   for (int i = 0; i < rboard; ++i) {
     for (int j = rboard-1; j > lboard; --j) {
       if (arr[j] > value) {
@@ -46,6 +46,7 @@ int binarSearc(int* arr, int left, int right, int target, bool find_first) {
     }
     return result;
 }
+
 int countPairs3(int *arr, int len, int value) {
     int count = 0;
     for (int i = 0; i < len; ++i) {
