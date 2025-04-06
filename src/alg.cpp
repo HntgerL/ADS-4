@@ -47,7 +47,6 @@ int countPairs3(int *arr, int len, int value) {
         lboard = middle + 1;
       } else {
         if (arr[middle] != value) {
-          std::cout << arr[i] << std::endl;
           count += 1;
         }
         arr[middle] = value;
